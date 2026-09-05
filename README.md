@@ -1,6 +1,6 @@
 # Solar Panel Defect Detector (YOLOv8)
 
-A YOLOv8-based object detection model for identifying defects on solar panels — built as a precursor study supporting my Final Year Project, an Autonomous Solar Panel Cleaning Mobile Robot.
+A YOLOv8-based object detection model for identifying defects on solar panels, built as a pre study supporting my Final Year Project, an Autonomous Solar Panel Cleaning Mobile Robot.
 
 ## Overview
 This project trains YOLOv8n on a public solar panel defect dataset, detecting 4 learned categories: **Bird-Drop, Clean, Defective, Dusty**. It demonstrates an end-to-end computer vision pipeline: dataset auditing, label cleanup, training, evaluation, and deployment as an interactive demo.
@@ -9,7 +9,7 @@ This project trains YOLOv8n on a public solar panel defect dataset, detecting 4 
 Autonomous solar panel cleaning robots need to distinguish between panels that require cleaning (dust, bird droppings) versus panels with structural damage that cleaning cannot fix. This project explores that classification problem as a standalone study.
 
 ## Dataset
-- Source: [Roboflow — Solar Panel Defects](https://universe.roboflow.com/solarpanel-2me5p/solar-panel-defects-lnge0), 700 images
+- Source: [Roboflow Solar Panel Defects](https://universe.roboflow.com/solarpanel-2me5p/solar-panel-defects-lnge0), 700 images
 - **Data cleaning performed**: the original dataset had 18 inconsistently-labeled classes (e.g., "Bird Drop", "Bird-drop", "Bird_Drop" as separate classes). These were audited and merged into 7 canonical classes.
 - **Class imbalance found**: of the 7 canonical classes, only 4 (Bird-Drop, Clean, Defective, Dusty) had actual labeled instances in this dataset version; Electrical-Damage, Physical-Damage, and Snow had zero annotated instances despite being defined.
 
@@ -23,7 +23,7 @@ Autonomous solar panel cleaning robots need to distinguish between panels that r
 Training curves and confusion matrix in `/results`.
 
 ## Known Limitations
-- Model trained on aerial/thermal-style solar panel imagery; generalizes poorly to standard ground-level color photographs (out-of-distribution).
+- Model trained on aerial/thermal style solar panel imagery; generalizes poorly to standard ground-level color photographs (out-of-distribution).
 - 3 of 7 defined classes have zero training data and cannot currently be detected.
 - Moderate overall accuracy (mAP50 0.268) reflects small dataset size (700 images) and YOLOv8-nano's speed/accuracy tradeoff.
 
@@ -39,7 +39,8 @@ python app.py
 ```
 
 ## Live Demo
-[Hugging Face Space link — added after deployment]
+(https://huggingface.co/spaces/mtahajawad/solar-panel-defect-detector)
 
 ## Author
-Muhammad Taha — BS Mechatronics and Control Engineering, UET Lahore
+Muhammad Taha Jawad, BS Mechatronics and Control Engineering, UET Lahore
+mail: mtahajawad1@gmail.com 
