@@ -43,4 +43,3 @@ python app.py
 
 ## Author
 Muhammad Taha Jawad, BS Mechatronics and Control Engineering, UET Lahore
-mail: mtahajawad1@gmail.com 
